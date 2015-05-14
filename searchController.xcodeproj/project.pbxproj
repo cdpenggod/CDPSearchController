@@ -14,6 +14,8 @@
 		5E6A2F651B0463390014511F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E6A2F641B0463390014511F /* Images.xcassets */; };
 		5E6A2F681B0463390014511F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E6A2F661B0463390014511F /* LaunchScreen.xib */; };
 		5E6A2F741B0463390014511F /* searchControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6A2F731B0463390014511F /* searchControllerTests.m */; };
+		5E6A2F7F1B0466180014511F /* CDPSearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6A2F7E1B0466180014511F /* CDPSearchModel.m */; };
+		5E6A2F861B047D680014511F /* CDPSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6A2F851B047D680014511F /* CDPSearchController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		5E6A2F6D1B0463390014511F /* searchControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = searchControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E6A2F721B0463390014511F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E6A2F731B0463390014511F /* searchControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = searchControllerTests.m; sourceTree = "<group>"; };
+		5E6A2F7D1B0466180014511F /* CDPSearchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDPSearchModel.h; sourceTree = "<group>"; };
+		5E6A2F7E1B0466180014511F /* CDPSearchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDPSearchModel.m; sourceTree = "<group>"; };
+		5E6A2F841B047D680014511F /* CDPSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDPSearchController.h; sourceTree = "<group>"; };
+		5E6A2F851B047D680014511F /* CDPSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDPSearchController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,7 @@
 		5E6A2F4B1B0463390014511F = {
 			isa = PBXGroup;
 			children = (
+				5E6A2F801B047BCA0014511F /* CDPSearchController */,
 				5E6A2F561B0463390014511F /* searchController */,
 				5E6A2F701B0463390014511F /* searchControllerTests */,
 				5E6A2F551B0463390014511F /* Products */,
@@ -85,6 +92,8 @@
 				5E6A2F5C1B0463390014511F /* AppDelegate.m */,
 				5E6A2F5E1B0463390014511F /* ViewController.h */,
 				5E6A2F5F1B0463390014511F /* ViewController.m */,
+				5E6A2F7D1B0466180014511F /* CDPSearchModel.h */,
+				5E6A2F7E1B0466180014511F /* CDPSearchModel.m */,
 				5E6A2F611B0463390014511F /* Main.storyboard */,
 				5E6A2F641B0463390014511F /* Images.xcassets */,
 				5E6A2F661B0463390014511F /* LaunchScreen.xib */,
@@ -117,6 +126,15 @@
 				5E6A2F721B0463390014511F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5E6A2F801B047BCA0014511F /* CDPSearchController */ = {
+			isa = PBXGroup;
+			children = (
+				5E6A2F841B047D680014511F /* CDPSearchController.h */,
+				5E6A2F851B047D680014511F /* CDPSearchController.m */,
+			);
+			path = CDPSearchController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +238,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E6A2F601B0463390014511F /* ViewController.m in Sources */,
+				5E6A2F7F1B0466180014511F /* CDPSearchModel.m in Sources */,
+				5E6A2F861B047D680014511F /* CDPSearchController.m in Sources */,
 				5E6A2F5D1B0463390014511F /* AppDelegate.m in Sources */,
 				5E6A2F5A1B0463390014511F /* main.m in Sources */,
 			);
@@ -299,7 +319,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -337,7 +357,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -349,7 +369,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = searchController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -359,7 +381,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = searchController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
